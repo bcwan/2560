@@ -19,7 +19,10 @@ class Board {
     return (this.grid[pos[0]][pos[1]] === null);
   }
 
-  
+  currentScore() {
+    
+  }
+
 
 
 }
