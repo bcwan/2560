@@ -3,7 +3,7 @@ class Board {
     this.grid = Board.makeGrid();
   }
 
-  makeGrid() {
+  static makeGrid() {
     const grid = [];
     for (let i = 0; i < 5; i++) {
       grid.push([]);
@@ -20,7 +20,15 @@ class Board {
   }
 
   currentScore() {
-    
+    let score = 0;
+    for(let i = 0; i < this.grid.length; i++) {
+      for (let j = 0; j < this.grid[i].length; j++) {
+        if (this.grid[i][j] !== null) {
+          score += this.grid[i][j];
+        }
+      }
+    }
+    return score;
   }
 
 
