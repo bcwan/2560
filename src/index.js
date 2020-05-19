@@ -3,5 +3,4 @@ let Game = require("./game");
 
 document.addEventListener("DOMContentLoaded", function () {
     const game = new Game();
-    game.setUpBoard();
 });
