@@ -1,6 +1,6 @@
 #grid {
   padding: 10px;
-  background-color: yellowgreen;
+  background-color: #e9f7ea;
   width: 450px;
   margin: auto;
   border-radius: 8px;
@@ -11,7 +11,7 @@
 }
 
 .square {
-  background-color: green;
+  background-color: #add8e6;
   width: 80px;
   height: 80px;
   margin: 5px;
