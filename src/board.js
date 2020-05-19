@@ -16,6 +16,8 @@ class Board {
   }
 
   isEmptyPos(pos) {
+    if (!Board.isValidPos(pos))
+      throw `Invalid position x: ${pos[0]}, y: ${pos[1]}`;
     return (this.grid[pos[0]][pos[1]] === null);
   }
 
