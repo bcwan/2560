@@ -1,0 +1,17 @@
+#grid {
+  padding: 10px;
+  background-color: yellowgreen;
+  width: 450px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.square {
+  background-color: green;
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+}
