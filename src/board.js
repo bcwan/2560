@@ -3,7 +3,7 @@ class Board {
     this.grid = Board.makeGrid();
   }
 
-  static makeGrid() {
+  makeGrid() {
     const grid = [];
     for (let i = 0; i < 5; i++) {
       grid.push([]);
@@ -14,6 +14,12 @@ class Board {
 
     return grid;
   }
+
+  isEmptyPos(pos) {
+    return (this.grid[pos[0]][pos[1]] === null);
+  }
+
+  
 
 
 }
