@@ -35,7 +35,7 @@ class Board {
     for (let i = 0; i < this.grid.length; i++) {
       for (let j = 0; j < this.grid[i].length; j++) {
         if (this.grid[i][j] !== null) {
-          this.grid[i][j] == null;
+          this.grid[i][j] = null;
         }
       }
     }
