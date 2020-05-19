@@ -19,6 +19,10 @@ class Board {
     return (this.grid[pos[0]][pos[1]] === null);
   }
 
+  static isValidPos(pos) {
+    return ((0 <= pos[0]) && (pos[0] < 5) && (0 <= pos[1]) && (pos[1] < 5));
+  }
+
   currentScore() {
     let score = 0;
     for(let i = 0; i < this.grid.length; i++) {
