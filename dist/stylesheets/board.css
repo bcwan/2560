@@ -3,6 +3,7 @@
   background-color: yellowgreen;
   width: 450px;
   margin: auto;
+  border-radius: 8px;
 }
 
 .row {
@@ -14,4 +15,5 @@
   width: 80px;
   height: 80px;
   margin: 5px;
+  border-radius: 4px;
 }
