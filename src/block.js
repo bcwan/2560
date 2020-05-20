@@ -49,7 +49,10 @@ class Block {
   }
 
   slideHorizontal(pos) {
-    let originTop = this.block.offsetTop;
+    if (pos[0] !== this.block.offsetTop) {
+      throw "x-axis positions do not match";
+    }
+    
     let originLeft = this.block.offsetLeft;
 
     this.block.style.top = `${pos[0]}px`;
@@ -58,8 +61,12 @@ class Block {
   }
 
   slideVertical(pos) {
+    if (pos[1] !== this.block.offsetLeft) {
+      throw "x-axis positions do not match";
+    }
     let originTop = this.block.offsetTop;
-    let originLeft = this.block.offsetLeft;
+    this.block.style.top = `${pos[0]}px`;
+    this.block.style.left = `${pos[1]}px`;
   }
 
 }
