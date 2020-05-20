@@ -48,11 +48,19 @@ class Block {
     return blockNum;
   }
 
-  moveBlockToCoor(pos) {
+  slideHorizontal(pos) {
+    let originTop = this.block.offsetTop;
+    let originLeft = this.block.offsetLeft;
+
     this.block.style.top = `${pos[0]}px`;
     this.block.style.left = `${pos[1]}px`;
+
   }
 
+  slideVertical(pos) {
+    let originTop = this.block.offsetTop;
+    let originLeft = this.block.offsetLeft;
+  }
 
 }
 

@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const game = new Game();
     
     // test code
-    let testBlock = new Block([375, 375]);
+    let testBlock = new Block([15, 375]);
     let grid = document.querySelector("#grid");
     grid.appendChild(testBlock.block);
-    testBlock.moveBlockToCoor([105, 105]);
+    testBlock.slideHorizontal([15, 105]);
 })
