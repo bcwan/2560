@@ -1,4 +1,5 @@
 let Board = require("./board"); 
+let Block = require('./block');
 
 class Game {
   constructor() {
