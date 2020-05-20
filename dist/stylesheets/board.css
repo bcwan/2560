@@ -4,6 +4,7 @@
   width: 450px;
   margin: auto;
   border-radius: 8px;
+  position: relative;
 }
 
 .row {

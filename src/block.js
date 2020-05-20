@@ -13,9 +13,10 @@ class Block {
   // pass in coordinates of block on grid
   constructor(/*pos*/) {
     this.number = 5;
-    this.color = COLORS_BY_NUMBER[this.number];
+    this.color = "#C1FF00";//COLORS_BY_NUMBER[this.number];
     this.textColor = "#000000";
-    //this.position = pos;
+    this.block = document.createElement("div");
+    this.createBlock();
   }
 
 
@@ -26,23 +27,24 @@ class Block {
     }
   }
 
-  setPosition(parent) {
-    let block = document.createElement("div");
-    block.id = "block";
-    block.style.backgroundColor = this.color;
+
+  createBlock() {
+    this.block.id = "block";
+    this.block.style.backgroundColor = this.color;
 
     let blockNum = document.createElement("p");
     blockNum.id = "block-num";
+
     blockNum.innerHTML = this.number;
     blockNum.textColor = this.textColor;
 
-    block.appendChild(blockNum);
-    parent.appendChild(block);
+    this.block.appendChild(blockNum);
   }
 
-  deleteBlock() {
-
+  moveBlockToSquare(coorX, coorY) {
+    
   }
+
 
 }
 

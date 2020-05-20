@@ -7,13 +7,16 @@
   height: 80px;
   width: 80px;
   border-radius: 4px;
-  display: relative;
   line-height: 80px;
   z-index: 1;
+  position: absolute;
+  top: 15px;
+  left: 15px;
 }
 
 #block-num {
   font-family: clear-sans;
   text-align: center;
   font-size: 45px;
+  margin: 0;
 }
