@@ -1,6 +1,17 @@
+const COLORS_BY_NUMBER = {
+  5: "#DDEFE9",
+  10: "#CEE2DC",
+  20: "#A4DECB",
+  40: "#97D297",
+  80: "#78BBFFAD",
+  160: "#449FFBA1",
+  320: "#D5F181",
+  640: "#C1FF00"
+};
+
 class Block {
   constructor() {
-    this.number = 4;
-    this.color =
+    this.number = 5;
+    this.color = 
   }
 }
