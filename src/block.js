@@ -27,7 +27,6 @@ class Block {
     }
   }
 
-
   createBlock(pos) {
     this.block.id = "block";
     this.block.style.backgroundColor = this.color;
@@ -38,7 +37,7 @@ class Block {
     this.block.style.left = `${pos[1]}px`;
 
   }
-  
+
   createBlockNumber(number) {
     let blockNum = document.createElement("p");
     blockNum.id = "block-num";
@@ -49,8 +48,9 @@ class Block {
     return blockNum;
   }
 
-  moveBlockToSquare(topX, leftY) {
-    
+  moveBlockToCoor(topX, leftY) {
+    this.block.style.top = `${topX}px`;
+    this.block.style.left = `${leftY}px`;
   }
 
 
