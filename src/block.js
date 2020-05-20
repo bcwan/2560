@@ -11,10 +11,10 @@ const COLORS_BY_NUMBER = {
 
 class Block {
   // pass in coordinates of block on grid
-  constructor(pos) {
+  constructor(/*pos*/) {
     this.number = 5;
     this.color = COLORS_BY_NUMBER[this.number];
-    this.position = pos;
+    //this.position = pos;
   }
 
 
@@ -25,16 +25,18 @@ class Block {
     }
   }
 
-  setPosition() {
+  setPosition(parent) {
     let block = document.createElement("div");
-    block.className = "block";
-    document.getElementsByClassName('block')[0]
-            .style
-            .backgroundColor = this.color;
+    block.id = "block";
+    block.style.backgroundColor = this.color;
+
     let blockNum = document.createElement("p");
-    block.className = "block-num";
-    document.getElementsByClassName("block-num")
-            .innerHTML = this.number;
+    blockNum.id = "block-num";
+    blockNum.innerHTML = this.number;
+
+    debugger;
+    block.appendChild(blockNum);
+    parent.appendChild(block);
   }
 
   deleteBlock() {
