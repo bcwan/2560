@@ -9,5 +9,5 @@ document.addEventListener("DOMContentLoaded", function () {
     let testBlock = new Block([375, 375]);
     let grid = document.querySelector("#grid");
     grid.appendChild(testBlock.block);
-    testBlock.moveBlockToSquare(15, 105);
+    testBlock.moveBlockToCoor([105, 105]);
 })

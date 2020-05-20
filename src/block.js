@@ -48,9 +48,9 @@ class Block {
     return blockNum;
   }
 
-  moveBlockToCoor(topX, leftY) {
-    this.block.style.top = `${topX}px`;
-    this.block.style.left = `${leftY}px`;
+  moveBlockToCoor(pos) {
+    this.block.style.top = `${pos[0]}px`;
+    this.block.style.left = `${pos[1]}px`;
   }
 
 
