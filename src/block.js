@@ -12,6 +12,22 @@ const COLORS_BY_NUMBER = {
 class Block {
   constructor() {
     this.number = 5;
-    this.color = 
+    this.color = COLORS_BY_NUMBER[this.number];
+    this.position = [];
   }
+
+
+  updateNumber() {
+    this.number *= 2;
+    if (COLORS_BY_NUMBER[this.number]) {
+      this.color = COLORS_BY_NUMBER[this.number];
+    }
+  }
+
+  deleteBlock() {
+
+  }
+
 }
+
+module.exports = Block;
