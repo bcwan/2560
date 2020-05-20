@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const game = new Game();
     
     // test code
-    let testBlock = new Block();
+    let testBlock = new Block([105, 105]);
     let grid = document.querySelector("#grid");
-    grid.appendChild(testBlock);
+    grid.appendChild(testBlock.block);
 })
