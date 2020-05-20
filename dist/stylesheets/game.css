@@ -14,3 +14,17 @@ body {
   margin-bottom: 10px;
   color: #877674;
 }
+
+.restart-btn {
+    background-color: darkgrey;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-family: clear-sans;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
