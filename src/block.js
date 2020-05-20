@@ -14,6 +14,7 @@ class Block {
   constructor(/*pos*/) {
     this.number = 5;
     this.color = COLORS_BY_NUMBER[this.number];
+    this.textColor = "#000000";
     //this.position = pos;
   }
 
@@ -33,8 +34,8 @@ class Block {
     let blockNum = document.createElement("p");
     blockNum.id = "block-num";
     blockNum.innerHTML = this.number;
+    blockNum.textColor = this.textColor;
 
-    debugger;
     block.appendChild(blockNum);
     parent.appendChild(block);
   }

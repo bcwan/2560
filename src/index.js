@@ -4,8 +4,9 @@ let Block = require("./block");
 
 document.addEventListener("DOMContentLoaded", function () {
     const game = new Game();
-    let grid = document.querySelector("#grid");
+    
+    // test code
     let block = new Block();
-    console.log(grid);
+    let grid = document.querySelector("#grid");
     block.setPosition(grid);
 })

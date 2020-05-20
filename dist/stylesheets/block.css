@@ -1,7 +1,19 @@
-.block {
+@font-face {
+  font-family: "clear-sans";
+  src: url(../typeface/clear-sans.bold.ttf);
+}
+
+#block {
   height: 80px;
   width: 80px;
+  border-radius: 4px;
   display: relative;
+  line-height: 80px;
   z-index: 1;
-  background-color: red;
+}
+
+#block-num {
+  font-family: clear-sans;
+  text-align: center;
+  font-size: 45px;
 }
