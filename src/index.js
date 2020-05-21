@@ -9,5 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let testBlock = new Block([15, 375]);
     let grid = document.querySelector("#grid");
     grid.appendChild(testBlock.block);
-    testBlock.slideHorizontal([15, 105]);
+    setTimeout(() => {
+        testBlock.slideHorizontal([15, 105])
+    }, 1500);
+    
 })
