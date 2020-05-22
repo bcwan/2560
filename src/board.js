@@ -11,7 +11,6 @@ class Board {
         grid[i].push(null);
       }
     }
-
     return grid;
   }
 

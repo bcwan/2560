@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // test code
     let testBlock = new Block([15, 15]);
-    let grid = document.querySelector("#grid");
+    let grid = document.querySelector("#board");
     grid.appendChild(testBlock.block);
 
     console.log("Slide left to right");

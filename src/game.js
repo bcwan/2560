@@ -8,7 +8,7 @@ class Game {
   }
 
   setUpBoard() {
-    const grid = document.getElementById("grid");
+    const grid = document.getElementById("board");
     
     for (let i = 0; i < this.board.grid.length; i++) {
       let row = document.createElement("div");
