@@ -5,6 +5,7 @@
   margin: auto;
   border-radius: 8px;
   position: relative;
+  height: 450px;
 }
 
 .row {
@@ -19,6 +20,12 @@
   border-radius: 4px;
 }
 
-#grid {
-  
+#grid-container {
+  position: absolute;
+  z-index: 1;
+}
+
+#tile-container {
+  position: absolute;
+  z-index: 2;
 }
