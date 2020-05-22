@@ -10,7 +10,7 @@
   line-height: 80px;
   z-index: 1;
   position: absolute;
-  transition: transform .5s ease-in
+  transition: transform .6s ease-in
 }
 
 #block-num {

@@ -6,11 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const game = new Game();
     
     // test code
-    let testBlock = new Block([15, 375]);
+    let testBlock = new Block([15, 15]);
     let grid = document.querySelector("#grid");
     grid.appendChild(testBlock.block);
-    setTimeout(() => {
-        testBlock.slideHorizontal([15, 105])
-    }, 1500);
+
+    console.log("Slide left to right");
+    testBlock.slideHorizontal([15, 375])
+
+
+    testBlock.slideVertical([375, 375]);
     
 })
+

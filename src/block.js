@@ -36,6 +36,9 @@ class Block {
     this.block.style.top = `${pos[0]}px`;
     this.block.style.left = `${pos[1]}px`;
 
+    this.block.setAttribute("top", `${pos[0]}`);
+    this.block.setAttribute("left", `${pos[1]}`);
+
   }
 
   createBlockNumber(number) {
@@ -49,22 +52,29 @@ class Block {
   }
 
   slideHorizontal(pos) {
-    if (pos[0] !== this.block.offsetTop) {
-      throw "x-axis positions do not match";
+    let newPos = `${pos[0]}`;
+    let oldPosAttr = this.block.getAttribute("top");
+    if (newPos !== oldPosAttr) {
+      throw `: x-axis positions do not match: newPosition: ${newPos}, oldPosition: ${oldPosAttr} `;
     }
 
-    let translate = pos[1] - this.block.offsetLeft;
-    this.block.style.transform = "translateX(" + translate + "px" + ")";
+    let translateX = pos[1] - this.block.getAttribute("left");
+    debugger;
+    this.block.style.transform = `translateX(${translateX}px)`;
 
   }
 
-  slideVertical(pos) {
-    if (pos[1] !== this.block.offsetLeft) {
-      throw "y-axis positions do not match";
-    }
 
-    let translate = pos[0] - this.block.offsetTop;
-    this.block.style.transform = "translateY(" + translate + "px" + ")";
+
+  slideVertical(pos) {
+    let newPos = `${pos[1]}`;
+    let oldPosAttr = this.block.getAttribute("left");
+    if (newPos !== oldPosAttr) {
+      throw `: y-axis positions do not match: destPosition: ${newPos}, oldPosition: ${oldPosAttr} `;
+    }
+  
+    let translateY = pos[0] - this.block.getAttribute("top");
+    this.block.style.transform = `translateY(${translateY}px)`;
 
   }
 
