@@ -16,5 +16,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // testBlock.slideVertical([375, 375]);
     
-})
+});
 
