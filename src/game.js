@@ -7,9 +7,10 @@ class Game {
     this.setUpBoard();
   }
 
-  setUpBoard() {
-    const grid = document.getElementById("board");
-    
+  setUpBoard() {  
+    const grid = document.createElement("div");
+    grid.id = "grid";
+
     for (let i = 0; i < this.board.grid.length; i++) {
       let row = document.createElement("div");
       row.className = `row row-${i}`;
@@ -22,6 +23,12 @@ class Game {
       
       grid.appendChild(row);
     }
+    
+    document.getElementById("board").appendChild(grid);
+  }
+
+  setUpBlockContainer() {
+
   }
 
   
