@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let blockContainer = document.querySelector("#block-container");
     blockContainer.appendChild(testBlock.block);
 
-    testBlock.block.classList.add("grid-0-4");
+    testBlock.block.classList.add("grid-2-0");
 
 
     // console.log("Slide left to right");
