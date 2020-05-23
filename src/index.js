@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const game = new Game();
     
     // test code
-    // let testBlock = new Block([15, 15]);
-    // let grid = document.querySelector("#board");
-    // grid.appendChild(testBlock.block);
+    let testBlock = new Block([15, 15]);
+    let blockContainer = document.querySelector("#block-container");
+    blockContainer.appendChild(testBlock.block);
 
     // console.log("Slide left to right");
     // testBlock.slideHorizontal([15, 375])
