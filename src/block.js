@@ -49,37 +49,37 @@ class Block {
   // test 
   moveVerticalUp () {
     let parseClass = this.positionClass.split("-");
-    parseClass = parseClass[1] = '0';
+    parseClass[1] = '0';
     parseClass = parseClass.join("-");
     this.block.className = "";
-    this.block.classList.add("parseClass");
+    this.block.classList.add(parseClass);
     this.positionClass = parseClass;
   }
 
   moveVerticalDown () {
     let parseClass = this.positionClass.split("-");
-    parseClass = parseClass[1] = '4';
+    parseClass[1] = '4';
     parseClass = parseClass.join("-");
     this.block.className = "";
-    this.block.classList.add("parseClass");
+    this.block.classList.add(parseClass);
     this.positionClass = parseClass;
   }
 
   moveHorizontalLeft () {
     let parseClass = this.positionClass.split("-");
-    parseClass = parseClass[2] = '0';
+    parseClass[2] = '0';
     parseClass = parseClass.join("-");
     this.block.className = "";
-    this.block.classList.add("parseClass");
+    this.block.classList.add(parseClass);
     this.positionClass = parseClass;
   }
 
   moveHorizontalRight () {
     let parseClass = this.positionClass.split("-");
-    parseClass = parseClass[2] = '4';
+    parseClass[2] = '4';
     parseClass = parseClass.join("-");
     this.block.className = "";
-    this.block.classList.add("parseClass");
+    this.block.classList.add(parseClass);
     this.positionClass = parseClass;
   }
 

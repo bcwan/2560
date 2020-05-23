@@ -15,23 +15,19 @@ document.addEventListener("DOMContentLoaded", function () {
         switch (event.which) {
             // left
             case 37: 
-                testBlock.block.className = "";
-                testBlock.block.classList.add("grid-0-0");
+                testBlock.moveHorizontalLeft();
                 break;
             // right
             case 39:  
-                testBlock.block.className = "";
-                testBlock.block.classList.add("grid-0-4")
+                testBlock.moveHorizontalRight();
                 break;
             // up
             case 38:  
-                testBlock.block.className = "";
-                testBlock.block.classList.add("grid-4-0");
+                testBlock.moveVerticalUp();
                 break;
             // down
             case 40: 
-                testBlock.block.className = "";
-                testBlock.block.classList.add("grid-4-4");
+                testBlock.moveVerticalDown();
                 break;
         }
     }
