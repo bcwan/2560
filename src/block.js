@@ -16,7 +16,7 @@ class Block {
     this.color = "#C1FF00";//COLORS_BY_NUMBER[this.number];
     this.textColor = "#000000";
     this.block = document.createElement("div");
-    this.createBlock(pos);
+    this.createBlock();
   }
 
 
@@ -27,17 +27,11 @@ class Block {
     }
   }
 
-  createBlock(pos) {
+  createBlock() {
     this.block.id = "block";
     this.block.style.backgroundColor = this.color;
 
     this.block.appendChild(this.createBlockNumber(this.number));
-    
-    this.block.style.top = `${pos[0]}px`;
-    this.block.style.left = `${pos[1]}px`;
-
-    this.block.setAttribute("top", `${pos[0]}`);
-    this.block.setAttribute("left", `${pos[1]}`);
 
   }
 
