@@ -15,28 +15,28 @@ document.addEventListener("DOMContentLoaded", function () {
         switch (event.which) {
             // left
             case 37: 
-
-                break;
-            // up
-            case 38:  
-                testBlock.block.classList.add("grid-0-4");
-                testBlock.block.classList.remove("grid-4-4");
+                testBlock.block.className = "";
+                testBlock.block.classList.add("grid-0-0");
                 break;
             // right
             case 39:  
+                testBlock.block.className = "";
+                testBlock.block.classList.add("grid-0-4")
+                break;
+            // up
+            case 38:  
+                testBlock.block.className = "";
+                testBlock.block.classList.add("grid-4-0");
                 break;
             // down
             case 40: 
+                testBlock.block.className = "";
                 testBlock.block.classList.add("grid-4-4");
                 break;
         }
     }
 
     window.onkeydown = onKeyPressed;
-
-
-    
-
     
 });
 
