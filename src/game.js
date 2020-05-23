@@ -34,27 +34,24 @@ class Game {
     document.getElementById("board").appendChild(blockContainer);
   }
 
-  setPosition (classPos) {
-
-  }
 
   // returns the class with the transform position
-  moveVerticalUp (classPos) {
-    let parseClass = classPos.split("-");
+  // moveVerticalUp (classPos) {
+  //   let parseClass = classPos.split("-");
 
-  }
+  // }
 
-  moveVerticalDown (classPos) {
-    let parseClass = classPos.split("-");
-  }
+  // moveVerticalDown (classPos) {
+  //   let parseClass = classPos.split("-");
+  // }
 
-  moveHorizontalLeft (classPos) {
-    let parseClass = classPos.split("-");
-  }
+  // moveHorizontalLeft (classPos) {
+  //   let parseClass = classPos.split("-");
+  // }
  
-  moveHorizontalRight (classPos) {
-    let parseClass = classPos.split("-");
-  }
+  // moveHorizontalRight (classPos) {
+  //   let parseClass = classPos.split("-");
+  // }
 
 }
 
