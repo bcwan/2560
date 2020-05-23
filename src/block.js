@@ -64,7 +64,11 @@ class Block {
   }
 
   moveHorizontalLeft () {
-
+    let parseClass = this.positionClass.split("-");
+    parseClass = parseClass[2] = '0';
+    parseClass = parseClass.join("-");
+    this.block.className = "";
+    this.block.classList.add("parseClass");
   }
 
   moveHorizontalRight () {
