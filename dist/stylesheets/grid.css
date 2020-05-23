@@ -40,3 +40,24 @@
   transform: translate(360px, 90px);
 }
 
+/* third row */
+.grid-2-0 {
+  transform: translate(0px, 180px);
+}
+
+.grid-2-1 {
+  transform: translate(90px, 180px);
+}
+
+.grid-2-2 {
+  transform: translate(180px, 180px);
+}
+
+.grid-2-3 {
+  transform: translate(270px, 180px);
+}
+
+.grid-2-4 {
+  transform: translate(360px, 180px);
+}
+
