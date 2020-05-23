@@ -46,6 +46,26 @@ class Block {
     return blockNum;
   }
 
+  // test 
+  moveVerticalUp () {
+    let parseClass = this.positionClass.split("-");
+    parseClass = parseClass[1] = '0';
+    parseClass = parseClass.join("-");
+    this.block.className = "";
+    this.block.classList.add("parseClass");
+  }
+
+  moveVerticalDown () {
+    let parseClass = this.positionClass.split("-");
+  }
+
+  moveHorizontalLeft () {
+    let parseClass = this.positionClass.split("-");
+  }
+
+  moveHorizontalRight () {
+    let parseClass = this.positionClass.split("-");
+  }
 
 }
 
