@@ -15,19 +15,19 @@ document.addEventListener("DOMContentLoaded", function () {
         switch (event.which) {
             // left
             case 37: 
-                testBlock.moveHorizontalLeft();
+                testBlock.updateClassPosition(2, 0);
                 break;
             // right
             case 39:  
-                testBlock.moveHorizontalRight();
+                testBlock.updateClassPosition(2, 4);
                 break;
             // up
             case 38:  
-                testBlock.moveVerticalUp();
+                testBlock.updateClassPosition(1, 0);
                 break;
             // down
             case 40: 
-                testBlock.moveVerticalDown();
+                testBlock.updateClassPosition(1, 4);
                 break;
         }
     }

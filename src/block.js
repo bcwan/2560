@@ -46,43 +46,17 @@ class Block {
     return blockNum;
   }
 
-  // test 
-  moveVerticalUp () {
+  // test moving algorithm
+  // help with DRY code for changing positions
+  updateClassPosition (indexToChange, number) {
     let parseClass = this.positionClass.split("-");
-    parseClass[1] = '0';
+    parseClass[indexToChange] = number.toString();
     parseClass = parseClass.join("-");
+
     this.block.className = "";
     this.block.classList.add(parseClass);
     this.positionClass = parseClass;
   }
-
-  moveVerticalDown () {
-    let parseClass = this.positionClass.split("-");
-    parseClass[1] = '4';
-    parseClass = parseClass.join("-");
-    this.block.className = "";
-    this.block.classList.add(parseClass);
-    this.positionClass = parseClass;
-  }
-
-  moveHorizontalLeft () {
-    let parseClass = this.positionClass.split("-");
-    parseClass[2] = '0';
-    parseClass = parseClass.join("-");
-    this.block.className = "";
-    this.block.classList.add(parseClass);
-    this.positionClass = parseClass;
-  }
-
-  moveHorizontalRight () {
-    let parseClass = this.positionClass.split("-");
-    parseClass[2] = '4';
-    parseClass = parseClass.join("-");
-    this.block.className = "";
-    this.block.classList.add(parseClass);
-    this.positionClass = parseClass;
-  }
-
 }
 
 module.exports = Block;
