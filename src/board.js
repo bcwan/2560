@@ -1,3 +1,31 @@
+const GRID_TO_ARRAY_COOR = {
+  [0, 0]: { className: "grid-0-0" },
+  [0, 1]: { className: "grid-0-1" },
+  [0, 2]: { className: "grid-0-2" },
+  [0, 3]: { className: "grid-0-3" },
+  [0, 4]: { className: "grid-0-4" },
+  [1, 0]: { className: "grid-1-0" },
+  [1, 1]: { className: "grid-1-1" },
+  [1, 2]: { className: "grid-1-2" },
+  [1, 3]: { className: "grid-1-3" },
+  [1, 4]: { className: "grid-1-4" },
+  [2, 0]: { className: "grid-2-0" },
+  [2, 1]: { className: "grid-2-1" },
+  [2, 2]: { className: "grid-2-2" },
+  [2, 3]: { className: "grid-2-3" },
+  [2, 4]: { className: "grid-2-4" },
+  [3, 0]: { className: "grid-3-0" },
+  [3, 1]: { className: "grid-3-1" },
+  [3, 2]: { className: "grid-3-2" },
+  [3, 3]: { className: "grid-3-3" },
+  [3, 4]: { className: "grid-3-4" },
+  [4, 0]: { className: "grid-4-0" },
+  [4, 1]: { className: "grid-4-1" },
+  [4, 2]: { className: "grid-4-2" },
+  [4, 3]: { className: "grid-4-3" },
+  [4, 4]: { className: "grid-4-4" }
+};
+
 class Board {
   constructor() {
     this.grid = Board.makeGrid();
@@ -47,34 +75,6 @@ class Board {
   }
 
 }
-
-const COOR_TO_GRID = {
-  "grid-0-0": { "x": 0, "y": 0 },
-  "grid-0-1": { "x": 0, "y": 1 },
-  "grid-0-2": { "x": 0, "y": 2 },
-  "grid-0-3": { "x": 0, "y": 3 },
-  "grid-0-4": { "x": 0, "y": 4 },
-  "grid-1-0": { "x": 1, "y": 0 },
-  "grid-1-1": { "x": 1, "y": 1 },
-  "grid-1-2": { "x": 1, "y": 2 },
-  "grid-1-3": { "x": 1, "y": 3 },
-  "grid-1-4": { "x": 1, "y": 4 },
-  "grid-2-0": { "x": 2, "y": 0 },
-  "grid-2-1": { "x": 2, "y": 1 },
-  "grid-2-2": { "x": 2, "y": 2 },
-  "grid-2-3": { "x": 2, "y": 3 },
-  "grid-2-4": { "x": 2, "y": 4 },
-  "grid-3-0": { "x": 3, "y": 0 },
-  "grid-3-1": { "x": 3, "y": 1 },
-  "grid-3-2": { "x": 3, "y": 2 },
-  "grid-3-3": { "x": 3, "y": 3 },
-  "grid-3-4": { "x": 3, "y": 4 },
-  "grid-4-0": { "x": 4, "y": 0 },
-  "grid-4-1": { "x": 4, "y": 1 },
-  "grid-4-2": { "x": 4, "y": 2 },
-  "grid-4-3": { "x": 4, "y": 3 },
-  "grid-4-4": { "x": 4, "y": 4 },
-};
 
 
 
