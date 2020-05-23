@@ -9,13 +9,33 @@ document.addEventListener("DOMContentLoaded", function () {
     let testBlock = new Block();
     let blockContainer = document.querySelector("#block-container");
     blockContainer.appendChild(testBlock.block);
-    debugger;
-    testBlock.block.classList.add("grid-4-4");
-    // debugger;
-    // testBlock.block.classList.remove("grid-4-4");
-    debugger;
-    testBlock.block.classList.add("grid-0-4");
-    testBlock.block.classList.remove("grid-4-4");
+
+    function onKeyPressed (event) {
+
+        switch (event.which) {
+            // left
+            case 37: 
+
+                break;
+            // up
+            case 38:  
+                testBlock.block.classList.add("grid-0-4");
+                testBlock.block.classList.remove("grid-4-4");
+                break;
+            // right
+            case 39:  
+                break;
+            // down
+            case 40: 
+                testBlock.block.classList.add("grid-4-4");
+                break;
+        }
+    }
+
+    window.onkeydown = onKeyPressed;
+
+
+    
 
     
 });

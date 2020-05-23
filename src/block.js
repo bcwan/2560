@@ -45,32 +45,6 @@ class Block {
     return blockNum;
   }
 
-  slideHorizontal(pos) {
-    let newPos = `${pos[0]}`;
-    let oldPosAttr = this.block.getAttribute("top");
-    if (newPos !== oldPosAttr) {
-      throw `: x-axis positions do not match: newPosition: ${newPos}, oldPosition: ${oldPosAttr} `;
-    }
-
-    let translateX = pos[1] - this.block.getAttribute("left");
-    debugger;
-    this.block.style.transform = `translateX(${translateX}px)`;
-
-  }
-
-
-
-  slideVertical(pos) {
-    let newPos = `${pos[1]}`;
-    let oldPosAttr = this.block.getAttribute("left");
-    if (newPos !== oldPosAttr) {
-      throw `: y-axis positions do not match: destPosition: ${newPos}, oldPosition: ${oldPosAttr} `;
-    }
-  
-    let translateY = pos[0] - this.block.getAttribute("top");
-    this.block.style.transform = `translateY(${translateY}px)`;
-
-  }
 
 }
 
