@@ -53,6 +53,7 @@ class Block {
     parseClass = parseClass.join("-");
     this.block.className = "";
     this.block.classList.add("parseClass");
+    this.positionClass = parseClass;
   }
 
   moveVerticalDown () {
@@ -61,6 +62,7 @@ class Block {
     parseClass = parseClass.join("-");
     this.block.className = "";
     this.block.classList.add("parseClass");
+    this.positionClass = parseClass;
   }
 
   moveHorizontalLeft () {
@@ -69,6 +71,7 @@ class Block {
     parseClass = parseClass.join("-");
     this.block.className = "";
     this.block.classList.add("parseClass");
+    this.positionClass = parseClass;
   }
 
   moveHorizontalRight () {
@@ -77,6 +80,7 @@ class Block {
     parseClass = parseClass.join("-");
     this.block.className = "";
     this.block.classList.add("parseClass");
+    this.positionClass = parseClass;
   }
 
 }
