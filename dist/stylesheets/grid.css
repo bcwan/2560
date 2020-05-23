@@ -1,0 +1,21 @@
+/* first row */
+.grid-0-0 {
+  transform: translate(0px, 0px);
+}
+
+.grid-0-1 {
+  transform: translate(90px, 0px);
+}
+
+.grid-0-2 {
+  transform: translate(180px, 0px);
+}
+
+.grid-0-3 {
+  transform: translate(270px, 0px);
+}
+
+.grid-0-4 {
+  transform: translate(360px, 0px);
+}
+
