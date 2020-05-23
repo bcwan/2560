@@ -63,23 +63,43 @@ class Game {
   }
 
 
-  // returns the class with the transform position
-  // moveVerticalUp (classPos) {
-  //   let parseClass = classPos.split("-");
+  updateBoardMovement(direction) {
+    for (let row = 0; row < this.board.grid.length; row++) {
+      for (let col = 0; col < this.board.grid[row].length; col++) {
 
-  // }
+        let blk = this.board.grid[row][col];
+        if (blk !== null) {
+          switch(direction) {
+            case "up":
+              this.updateClassPosition(blk, 1, 0);
+              break;
+            case "down":
+              this.updateClassPosition(blk, 1, 4);
+              break;
+            case "left":
+              this.updateClassPosition(blk, 2, 0);
+              break;
+            case "right":
+              this.updateClassPosition(blk, 2, 4);
+              break
+          }
+        }
 
-  // moveVerticalDown (classPos) {
-  //   let parseClass = classPos.split("-");
-  // }
+      }
+    }
+  }
 
-  // moveHorizontalLeft (classPos) {
-  //   let parseClass = classPos.split("-");
-  // }
+
+  updateClassPosition(blk, indexToChange, number) {
+    let parseClass = blk.positionClass.split("-");
+    parseClass[indexToChange] = number.toString();
+    parseClass = parseClass.join("-");
+
+    blk.block.className = "";
+    blk.block.classList.add(parseClass);
+    blk.positionClass = parseClass;
+  }
  
-  // moveHorizontalRight (classPos) {
-  //   let parseClass = classPos.split("-");
-  // }
 
 }
 
