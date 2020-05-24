@@ -6,21 +6,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const game = new Game();
 
     function onKeyPressed (event) {
-
+        
         switch (event.which) {
             case 37: 
+                game.addNewBlock();
                 game.updateBoardMovementLeftUp("left");
                 console.log(game.board.grid);
                 break;
             case 39:  
+                game.addNewBlock();
                 game.updateBoardMovementRightDown("right");
                 console.log(game.board.grid);
                 break;
             case 38:  
+                game.addNewBlock();
                 game.updateBoardMovementLeftUp("up");
                 console.log(game.board.grid);
                 break;
             case 40: 
+                game.addNewBlock();
                 game.updateBoardMovementRightDown("down");
                 console.log(game.board.grid);
                 break;
