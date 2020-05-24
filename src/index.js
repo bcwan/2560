@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
     game.board.grid[1][0] = testBlock3;
     blockContainer.appendChild(testBlock3.block);
 
+    // let testBlock4 = new Block([1, 1], 8);
+    // game.board.grid[1][1] = testBlock4;
+    // blockContainer.appendChild(testBlock4.block);
+
     function onKeyPressed (event) {
 
         switch (event.which) {
