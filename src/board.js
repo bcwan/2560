@@ -94,7 +94,6 @@ class Board {
   }
 
   lastEmptyPosRight(posClass) {
-    debugger;
     let pos = posClass.split("-");
     let currentRow = parseInt(pos[1]);
     let col = parseInt(pos[2]);

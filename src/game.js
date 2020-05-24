@@ -97,9 +97,7 @@ class Game {
   updateBoardMovementRight(direction) {
     for (let row = 0; row < this.board.grid.length; row++) {
       for (let col = this.board.grid[row].length - 1; col >= 0; col--) {
-
         let blk = this.board.grid[row][col];
-        debugger;
         if (blk !== null) {
           switch (direction) {
             case "right":
