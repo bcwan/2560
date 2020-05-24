@@ -16,7 +16,7 @@ class Block {
     this.color = "#C1FF00";//COLORS_BY_NUMBER[this.number];
     this.textColor = "#000000";
     this.block = document.createElement("div");
-    this.positionClass = "grid-0-0";
+    this.positionClass = `grid-${pos[0]}-${pos[1]}`;
     this.createBlock();
   }
 

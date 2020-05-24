@@ -5,12 +5,17 @@ let Block = require("./block");
 document.addEventListener("DOMContentLoaded", function () {
     const game = new Game();
     
-    // test code
-    let testBlock = new Block();
-    game.board.grid[0][0] = testBlock;
     let blockContainer = document.querySelector("#block-container");
+    // test code
+    let testBlock = new Block([0, 0]);
+    game.board.grid[0][0] = testBlock;
     blockContainer.appendChild(testBlock.block);
+
+    let testBlock2 = new Block([0, 1]);
+    game.board.grid[0][1] = testBlock2;
+    blockContainer.appendChild(testBlock2.block);
     
+    console.log(game.board.grid);
 
     function onKeyPressed (event) {
 
