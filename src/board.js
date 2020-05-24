@@ -47,11 +47,12 @@ class Board {
   }
 
   lastEmptyPosUp(posClass) {
+    debugger;
     let pos = posClass.split("-");
+    let row = parseInt(pos[1]);
+    let currentCol = parseInt(pos[2]);
 
-    let row = pos[1] - 1;
-    let currentCol = pos[2];
-    // find best empty position going up
+    row = row - 1;
     while (row >= 0) {
       if (this.grid[row][currentCol] === null) {
         row--;
@@ -59,14 +60,16 @@ class Board {
         return row + 1;
       }
     }
-    return pos[1];
+    return 0;
   }
 
   lastEmptyPosDown(posClass) {
+    debugger;
     let pos = posClass.split("-");
+    let row = parseInt(pos[1]);
+    let currentCol = parseInt(pos[2]);
 
-    let row = pos[1] + 1;
-    let currentCol = pos[2];
+    row = row + 1;
     while (row <= this.grid.length - 1) {
       if (this.grid[row][currentCol] === null) {
         row++;
@@ -74,13 +77,15 @@ class Board {
         return row - 1;
       }
     }
-    return pos[1];
+    return this.grid.length - 1;
   }
 
   lastEmptyPosLeft(posClass) {
+    debugger;
     let pos = posClass.split("-");
-    let currentRow = pos[1];
-    let col = pos[2] - 1;
+    let currentRow = parseInt(pos[1]);
+    let col = parseInt(pos[2]);
+    col = col - 1;
     while (col >= 0) {
       if (this.grid[currentRow][col] === null) {
         col--;
@@ -88,13 +93,16 @@ class Board {
         return col + 1;
       }
     }
-    return pos[2];
+    return 0;
   }
 
   lastEmptyPosRight(posClass) {
+    debugger;
     let pos = posClass.split("-");
-    let currentRow = pos[1];
-    let col = pos[2] + 1;
+    let currentRow = parseInt(pos[1]);
+    let col = parseInt(pos[2]);
+    
+    col = col + 1;
     while (col <= this.grid[currentRow].length) {
       if (this.grid[currentRow][col] === null) {
         col++;
@@ -102,7 +110,7 @@ class Board {
         return col - 1;
       }
     }
-    return pos[2];
+    return this.grid[currentRow].length - 1;
   }
 
 }

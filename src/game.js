@@ -71,16 +71,24 @@ class Game {
         if (blk !== null) {
           switch(direction) {
             case "up":
-              this.updateClassPosition(blk, 1, 0);
+              this.updateClassPosition(blk, 1, 
+                this.board.lastEmptyPosUp(blk.positionClass)
+              );
               break;
             case "down":
-              this.updateClassPosition(blk, 1, 4);
+              this.updateClassPosition(blk, 1, 
+                this.board.lastEmptyPosDown(blk.positionClass)
+              );
               break;
             case "left":
-              this.updateClassPosition(blk, 2, 0);
+              this.updateClassPosition(blk, 2, 
+                this.board.lastEmptyPosLeft(blk.positionClass)
+              );
               break;
             case "right":
-              this.updateClassPosition(blk, 2, 4);
+              this.updateClassPosition(blk, 2, 
+                this.board.lastEmptyPosRight(blk.positionClass)  
+              );
               break
           }
         }
@@ -91,6 +99,7 @@ class Game {
 
 
   updateClassPosition(blk, indexToChange, number) {
+    debugger;
     let parseClass = blk.positionClass.split("-");
 
     let oldX = parseClass[1];
