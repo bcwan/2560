@@ -52,7 +52,7 @@ class Board {
     let row = pos[1] - 1;
     let currentCol = pos[2];
     // find best empty position going up
-    while (row > 0) {
+    while (row >= 0) {
       if (this.grid[row][currentCol] === null) {
         row--;
       } else {
@@ -67,7 +67,7 @@ class Board {
 
     let row = pos[1] + 1;
     let currentCol = pos[2];
-    while (row < this.grid.length) {
+    while (row <= this.grid.length - 1) {
       if (this.grid[row][currentCol] === null) {
         row++;
       } else {
@@ -78,7 +78,7 @@ class Board {
   }
 
   lastEmptyPosLeft(posClass) {
-
+    
   }
 
   lastEmptyPosRight(posClass) {
