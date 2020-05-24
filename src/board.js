@@ -67,9 +67,14 @@ class Board {
 
     let row = pos[1] + 1;
     let currentCol = pos[2];
-    
-
-    return bestEmptyPos;
+    while (row < this.grid.length) {
+      if (this.grid[row][currentCol] === null) {
+        row++;
+      } else {
+        return row - 1;
+      }
+    }
+    return this.grid.length;
   }
 
   lastEmptyPosLeft(posClass) {
