@@ -59,7 +59,7 @@ class Board {
         return row + 1;
       }
     }
-    return 0;
+    return pos[1];
   }
 
   lastEmptyPosDown(posClass) {
@@ -74,15 +74,35 @@ class Board {
         return row - 1;
       }
     }
-    return this.grid.length;
+    return pos[1];
   }
 
   lastEmptyPosLeft(posClass) {
-    
+    let pos = posClass.split("-");
+    let currentRow = pos[1];
+    let col = pos[2] - 1;
+    while (col >= 0) {
+      if (this.grid[currentRow][col] === null) {
+        col--;
+      } else {
+        return col + 1;
+      }
+    }
+    return pos[2];
   }
 
   lastEmptyPosRight(posClass) {
-
+    let pos = posClass.split("-");
+    let currentRow = pos[1];
+    let col = pos[2] + 1;
+    while (col <= this.grid[currentRow].length) {
+      if (this.grid[currentRow][col] === null) {
+        col++;
+      } else {
+        return col - 1;
+      }
+    }
+    return pos[2];
   }
 
 }
