@@ -46,6 +46,40 @@ class Board {
     }
   }
 
+  lastEmptyPosUp(posClass) {
+    let pos = posClass.split("-");
+
+    let row = pos[1] - 1;
+    let currentCol = pos[2];
+    // find best empty position going up
+    while (row > 0) {
+      if (this.grid[row][currentCol] === null) {
+        row--;
+      } else {
+        return row + 1;
+      }
+    }
+    return 0;
+  }
+
+  lastEmptyPosDown(posClass) {
+    let pos = posClass.split("-");
+
+    let row = pos[1] + 1;
+    let currentCol = pos[2];
+    
+
+    return bestEmptyPos;
+  }
+
+  lastEmptyPosLeft(posClass) {
+
+  }
+
+  lastEmptyPosRight(posClass) {
+
+  }
+
 }
 
 

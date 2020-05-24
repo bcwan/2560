@@ -14,23 +14,25 @@ document.addEventListener("DOMContentLoaded", function () {
     let testBlock2 = new Block([0, 1]);
     game.board.grid[0][1] = testBlock2;
     blockContainer.appendChild(testBlock2.block);
-    
-    console.log(game.board.grid);
 
     function onKeyPressed (event) {
 
         switch (event.which) {
             case 37: 
                 game.updateBoardMovement("left");
+                console.log(game.board.grid);
                 break;
             case 39:  
                 game.updateBoardMovement("right");
+                console.log(game.board.grid);
                 break;
             case 38:  
                 game.updateBoardMovement("up");
+                console.log(game.board.grid);
                 break;
             case 40: 
                 game.updateBoardMovement("down");
+                console.log(game.board.grid);
                 break;
         }
     }
