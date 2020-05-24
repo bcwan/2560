@@ -11,8 +11,8 @@ const COLORS_BY_NUMBER = {
 
 class Block {
   // pass in coordinates of block on grid
-  constructor(pos) {
-    this.number = 5;
+  constructor(pos, number) {
+    this.number = number;
     this.color = "#C1FF00";//COLORS_BY_NUMBER[this.number];
     this.textColor = "#000000";
     this.block = document.createElement("div");

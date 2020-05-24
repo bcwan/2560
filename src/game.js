@@ -63,8 +63,8 @@ class Game {
   }
 
 
-  // only works for up, down, left
-  updateBoardMovement(direction) {
+  // only works for up, left
+  updateBoardMovementLeftUp(direction) {
     for (let row = 0; row < this.board.grid.length; row++) {
       for (let col = 0; col < this.board.grid[row].length; col++) {
 
@@ -74,11 +74,6 @@ class Game {
             case "up":
               this.updateClassPosition(blk, 1, 
                 this.board.lastEmptyPosUp(blk.positionClass)
-              );
-              break;
-            case "down":
-              this.updateClassPosition(blk, 1, 
-                this.board.lastEmptyPosDown(blk.positionClass)
               );
               break;
             case "left":
@@ -93,9 +88,9 @@ class Game {
     }
   }
 
-  // only works for right, since we want to move blocks in front first
-  updateBoardMovementRight(direction) {
-    for (let row = 0; row < this.board.grid.length; row++) {
+  // works for down and right
+  updateBoardMovementRightDown(direction) {
+    for (let row = this.board.grid.length - 1; row >= 0; row--) {
       for (let col = this.board.grid[row].length - 1; col >= 0; col--) {
         let blk = this.board.grid[row][col];
         if (blk !== null) {
@@ -105,13 +100,17 @@ class Game {
                 this.board.lastEmptyPosRight(blk.positionClass)
               );
               break
+            case "down":
+              this.updateClassPosition(blk, 1,
+                this.board.lastEmptyPosDown(blk.positionClass)
+              );
+              break;
           }
         }
 
       }
     }
   }
-
 
   updateClassPosition(blk, indexToChange, number) {
     let parseClass = blk.positionClass.split("-");
