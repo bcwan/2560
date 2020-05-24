@@ -9,23 +9,23 @@ document.addEventListener("DOMContentLoaded", function () {
         
         switch (event.which) {
             case 37: 
-                game.addNewBlock();
                 game.updateBoardMovementLeftUp("left");
+                game.addNewBlock();
                 console.log(game.board.grid);
                 break;
             case 39:  
-                game.addNewBlock();
                 game.updateBoardMovementRightDown("right");
+                game.addNewBlock();
                 console.log(game.board.grid);
                 break;
             case 38:  
-                game.addNewBlock();
                 game.updateBoardMovementLeftUp("up");
+                game.addNewBlock();
                 console.log(game.board.grid);
                 break;
             case 40: 
-                game.addNewBlock();
                 game.updateBoardMovementRightDown("down");
+                game.addNewBlock();
                 console.log(game.board.grid);
                 break;
         }

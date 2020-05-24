@@ -116,6 +116,7 @@ class Game {
         if (blk !== null) {
           switch (direction) {
             case "right":
+              this.board.mergeBlockRight(blk.positionClass)
               this.updateClassPosition(blk, 2,
                 this.board.lastEmptyPosRight(blk.positionClass)
               );
