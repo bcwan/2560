@@ -47,7 +47,6 @@ class Board {
   }
 
   lastEmptyPosUp(posClass) {
-    debugger;
     let pos = posClass.split("-");
     let row = parseInt(pos[1]);
     let currentCol = parseInt(pos[2]);
@@ -64,7 +63,6 @@ class Board {
   }
 
   lastEmptyPosDown(posClass) {
-    debugger;
     let pos = posClass.split("-");
     let row = parseInt(pos[1]);
     let currentCol = parseInt(pos[2]);
@@ -81,7 +79,6 @@ class Board {
   }
 
   lastEmptyPosLeft(posClass) {
-    debugger;
     let pos = posClass.split("-");
     let currentRow = parseInt(pos[1]);
     let col = parseInt(pos[2]);

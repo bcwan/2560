@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log(game.board.grid);
                 break;
             case 39:  
-                game.updateBoardMovement("right");
+                game.updateBoardMovementRight("right");
                 console.log(game.board.grid);
                 break;
             case 38:  
