@@ -45,18 +45,6 @@ class Block {
 
     return blockNum;
   }
-
-  // // test moving algorithm
-  // // help with DRY code for changing positions
-  // updateClassPosition (indexToChange, number) {
-  //   let parseClass = this.positionClass.split("-");
-  //   parseClass[indexToChange] = number.toString();
-  //   parseClass = parseClass.join("-");
-
-  //   this.block.className = "";
-  //   this.block.classList.add(parseClass);
-  //   this.positionClass = parseClass;
-  // }
 }
 
 module.exports = Block;
