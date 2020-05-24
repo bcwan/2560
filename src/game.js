@@ -34,7 +34,6 @@ class Game {
     this.board = new Board();
     this.setUpBoard();
     this.setUpBlockContainer();
-    this.addNewBlocks();
   }
 
   setUpBoard() {  
@@ -61,9 +60,12 @@ class Game {
     const blockContainer = document.createElement('div');
     blockContainer.id = "block-container";
     document.getElementById("board").appendChild(blockContainer);
+    // add two initial blocks
+    this.addNewBlock();
+    this.addNewBlock();
   }
 
-  addNewBlocks () {
+  addNewBlock () {
     let blockContainer = document.getElementById('block-container');
     let randRow = Math.floor(Math.random() * 5);
     let randCol = Math.floor(Math.random() * 5);
