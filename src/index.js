@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let blockContainer = document.querySelector("#block-container");
     blockContainer.appendChild(testBlock.block);
     
+
     function onKeyPressed (event) {
 
         switch (event.which) {

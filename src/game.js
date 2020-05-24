@@ -92,12 +92,28 @@ class Game {
 
   updateClassPosition(blk, indexToChange, number) {
     let parseClass = blk.positionClass.split("-");
+
+    let oldX = parseClass[1];
+    let oldY = parseClass[2];
+
     parseClass[indexToChange] = number.toString();
+
+    let newX = parseClass[1];
+    let newY = parseClass[2];
+
     parseClass = parseClass.join("-");
+
+    this.updateGridPosition(oldX, oldY, newX, newY);
 
     blk.block.className = "";
     blk.block.classList.add(parseClass);
     blk.positionClass = parseClass;
+  }
+
+  updateGridPosition(oldX, oldY, newX, newY) {
+    let block = this.board.grid[oldX][oldY];
+    this.board.grid[oldX][oldY] = null;
+    this.board.grid[newX][newY] = block;
   }
  
 
