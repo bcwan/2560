@@ -34,6 +34,7 @@ class Game {
     this.board = new Board();
     this.setUpBoard();
     this.setUpBlockContainer();
+    this.addNewBlocks();
   }
 
   setUpBoard() {  
@@ -62,6 +63,23 @@ class Game {
     document.getElementById("board").appendChild(blockContainer);
   }
 
+  addNewBlocks () {
+    let blockContainer = document.getElementById('block-container');
+    let randRow = Math.floor(Math.random() * 5);
+    let randCol = Math.floor(Math.random() * 5);
+    let added = false;
+    while (!added){
+      if (this.board.isEmptyPos([randRow, randCol])) {
+        let newBlock = new Block([randRow, randCol], 5);
+        this.board.grid[randRow][randCol] = newBlock;
+        blockContainer.appendChild(newBlock.block);
+        added = true;
+      } else {
+        randRow = Math.floor(Math.random() * 5);
+        randCol = Math.floor(Math.random() * 5);
+      }
+    }
+  }
 
   // only works for up, left
   updateBoardMovementLeftUp(direction) {
