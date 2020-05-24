@@ -45,6 +45,7 @@ class Block {
 
     return blockNum;
   }
+
 }
 
 module.exports = Block;

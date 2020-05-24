@@ -109,6 +109,51 @@ class Board {
     return this.grid[currentRow].length - 1;
   }
 
+  mergeBlockRight(posClass) {
+    //find the closest block
+    let pos = posClass.split("-");
+    let currentRow = parseInt(pos[1]);
+    let col = parseInt(pos[2]);
+
+    col = col + 1;
+    let currentBlock = this.grid[currentRow][col];
+    let oldRow = currentRow;
+    let oldCol = col;
+    let nextBlock = null;
+
+    while (col < this.grid[currentRow].length) {
+      if (this.grid[currentRow][col] === null) {
+        col++;
+      } else {
+        nextBlock = this.grid[currentRow][col];
+      }
+    }
+
+    if (currentBlock.number === nextBlock.number && nextBlock !== null) {
+      // delete current block
+        currentBlock.block.remove();
+        this.grid[oldRow][oldCol] = null;
+        //delete the div
+        //delete the block inside the grid
+
+        nextBlock.updateNumber();
+    }
+  }
+
+
+
+  mergeBlockLeft() {
+
+  }
+
+  mergeBlockUp() {
+
+  }
+
+  mergeBlockDown() {
+
+  }
+
 }
 
 
