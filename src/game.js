@@ -163,7 +163,6 @@ class Game {
 
   mergeBlockRight(posClass) {
     //find the closest block
-    debugger;
     let pos = posClass.split("-");
     let currentRow = parseInt(pos[1]);
     let col = parseInt(pos[2]);
@@ -173,7 +172,7 @@ class Game {
     col = col + 1;
     let oldRow = currentRow;
     let nextBlock = null;
-    debugger;
+
     while (col < this.board.grid[currentRow].length) {
       if (this.board.grid[currentRow][col] === null) {
         col++;
@@ -182,10 +181,10 @@ class Game {
         break;
       }
     }
-    debugger;
+
     if (nextBlock !== null && currentBlock.number === nextBlock.number) {
       // delete current block
-      debugger;
+
       console.log(`Before remove div: ${this.board.grid}`);
       let currentNextBlockNumber = nextBlock.number;
 
