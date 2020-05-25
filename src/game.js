@@ -92,6 +92,7 @@ class Game {
         if (blk !== null) {
           switch(direction) {
             case "up":
+              this.mergeBlockUp(blk.positionClass);
               this.updateClassPosition(blk, 1, 
                 this.board.lastEmptyPosUp(blk.positionClass)
               );
@@ -207,7 +208,6 @@ class Game {
 
   mergeBlockLeft(posClass) {
     //find the closest block
-    debugger;
     let pos = posClass.split("-");
     let currentRow = parseInt(pos[1]);
     let col = parseInt(pos[2]);
@@ -218,7 +218,6 @@ class Game {
     let oldRow = currentRow;
     let nextBlock = null;
 
-    debugger;
     while (col >= 0) {
       if (this.board.grid[currentRow][col] === null) {
         col--;
@@ -231,7 +230,6 @@ class Game {
     
     if (nextBlock !== null && currentBlock.number === nextBlock.number) {
       // delete current block
-      debugger;
 
       console.log(`Before remove div: ${this.board.grid}`);
       let currentNextBlockNumber = nextBlock.number;
@@ -252,10 +250,51 @@ class Game {
     }
   }
 
+  mergeBlockUp(posClass) {
+    //find the closest block
+    debugger;
+    let pos = posClass.split("-");
+    let row = parseInt(pos[1]);
+    let currentCol = parseInt(pos[2]);
+    let currentBlock = this.board.grid[row][currentCol];
+
+    let oldCol = currentCol;
+    let oldRow = row;
+    row = row - 1;
+    let nextBlock = null;
 
 
-  mergeBlockUp() {
+    while (row >= 0) {
+      if (this.board.grid[row][currentCol] === null) {
+        row--;
+      } else {
+        nextBlock = this.board.grid[row][currentCol];
+        break;
+      }
+    }
 
+
+    if (nextBlock !== null && currentBlock.number === nextBlock.number) {
+      // delete current block
+      debugger;
+
+      console.log(`Before remove div: ${this.board.grid}`);
+      let currentNextBlockNumber = nextBlock.number;
+
+      currentBlock.block.remove();
+      this.board.grid[oldRow][oldCol] = null;
+
+      nextBlock.block.remove();
+      this.board.grid[row][currentCol] = null;
+
+      // add new block in place of old one
+      let upgradedBlock = new Block([row, currentCol], currentNextBlockNumber * 2);
+      this.board.grid[row][currentCol] = upgradedBlock;
+      console.log(`After remove div: ${this.board.grid}`);
+
+      let blockContainer = document.getElementById('block-container');
+      blockContainer.appendChild(upgradedBlock.block);
+    }
   }
 
   mergeBlockDown() {
