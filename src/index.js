@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function resetGame() {
-        console.log("Hello");
         document.getElementById('board').textContent = '';
         game.board = null;
         game = new Game();
