@@ -3,7 +3,7 @@ let Game = require("./game");
 let Block = require("./block");
 
 document.addEventListener("DOMContentLoaded", function () {
-    const game = new Game();
+    let game = new Game();
 
     function onKeyPressed (event) {
         
@@ -31,8 +31,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function resetGame() {
+        console.log("Hello");
+        document.getElementById('board').textContent = '';
+        game.board = null;
+        game = new Game();
+    }
+
+    // listening for arrow keys
     window.onkeydown = onKeyPressed;
-    
-    
+
+    // reset game
+    let resetBtn = document.querySelector(".restart-btn");
+    resetBtn.onclick = () => {
+        resetGame();
+    };
+
 });
 

@@ -313,10 +313,6 @@ class Game {
     }
   }
 
-  resetGame() {
-    
-  }
- 
 
 }
 
