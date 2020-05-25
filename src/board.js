@@ -109,56 +109,6 @@ class Board {
     return this.grid[currentRow].length - 1;
   }
 
-  mergeBlockRight(posClass) {
-    //find the closest block
-    debugger;
-    let pos = posClass.split("-");
-    let currentRow = parseInt(pos[1]);
-    let col = parseInt(pos[2]);
-
-    col = col + 1;
-    let currentBlock = this.grid[currentRow][col];
-    let oldRow = currentRow;
-    let oldCol = col;
-    let nextBlock = null;
-    debugger;
-    while (col < this.grid[currentRow].length) {
-      if (this.grid[currentRow][col] === null) {
-        col++;
-      } else {
-        nextBlock = this.grid[currentRow][col];
-        break;
-      }
-    }
-    debugger;
-    if (nextBlock !== null && currentBlock.number === nextBlock.number) {
-      // delete current block
-        debugger;
-        console.log(`Before remove div: ${this.grid}`);
-        currentBlock.block.remove();
-        this.grid[oldRow][oldCol] = null;
-        //delete the div
-        //delete the block inside the grid
-
-        nextBlock.updateNumber();
-        console.log(`After remove div: ${this.grid}`);
-    }
-  }
-
-
-
-  mergeBlockLeft() {
-
-  }
-
-  mergeBlockUp() {
-
-  }
-
-  mergeBlockDown() {
-
-  }
-
 }
 
 
