@@ -157,26 +157,7 @@ class Game {
       }
     }
 
-    if (nextBlock !== null && currentBlock.number === nextBlock.number) {
-      // delete current block
-
-      console.log(`Before remove div: ${this.board.grid}`);
-      let currentNextBlockNumber = nextBlock.number;
-
-      currentBlock.block.remove();
-      this.board.grid[oldRow][oldCol] = null;
-
-      nextBlock.block.remove();
-      this.board.grid[currentRow][col] = null;
-
-      // add new block in place of old one
-      let upgradedBlock = new Block([currentRow, col], currentNextBlockNumber * 2);
-      this.board.grid[currentRow][col] = upgradedBlock;
-      console.log(`After remove div: ${this.board.grid}`);
-
-      let blockContainer = document.getElementById('block-container');
-      blockContainer.appendChild(upgradedBlock.block);
-    }
+    this.merging(nextBlock, currentBlock, oldRow, oldCol, currentRow, col);
   }
 
   mergeBlockLeft(posClass) {
