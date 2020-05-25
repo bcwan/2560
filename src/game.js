@@ -55,7 +55,6 @@ class Game {
     }
   }
 
-  // only works for up, left
   updateBoardMovementLeftUp(direction) {
     for (let row = 0; row < this.board.grid.length; row++) {
       for (let col = 0; col < this.board.grid[row].length; col++) {
