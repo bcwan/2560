@@ -199,6 +199,9 @@ class Game {
       let upgradedBlock = new Block([currentRow, col], currentNextBlockNumber * 2);
       this.board.grid[currentRow][col] = upgradedBlock;
       console.log(`After remove div: ${this.board.grid}`);
+
+      let blockContainer = document.getElementById('block-container');
+      blockContainer.appendChild(upgradedBlock.block);
     }
   }
 

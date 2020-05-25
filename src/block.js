@@ -22,6 +22,7 @@ class Block {
 
 
   createBlock() {
+    debugger;
     this.block.id = "block";
     this.block.style.backgroundColor = this.color;
     this.block.classList.add(this.positionClass);
