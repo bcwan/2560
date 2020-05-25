@@ -32,7 +32,7 @@ class Game {
     const blockContainer = document.createElement('div');
     blockContainer.id = "block-container";
     document.getElementById("board").appendChild(blockContainer);
-    // add two initial blocks
+
     this.addNewBlock();
     this.addNewBlock();
   }
