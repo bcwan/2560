@@ -169,9 +169,9 @@ class Game {
     let col = parseInt(pos[2]);
     let currentBlock = this.board.grid[currentRow][col];
 
+    let oldCol = col;
     col = col + 1;
     let oldRow = currentRow;
-    let oldCol = col;
     let nextBlock = null;
     debugger;
     while (col < this.board.grid[currentRow].length) {
@@ -188,9 +188,16 @@ class Game {
       debugger;
       console.log(`Before remove div: ${this.board.grid}`);
       let currentNextBlockNumber = nextBlock.number;
+
       currentBlock.block.remove();
       this.board.grid[oldRow][oldCol] = null;
-      let upgradedBlock = new Block([oldRow, oldCol], currentNextBlockNumber);
+
+      nextBlock.block.remove();
+      this.board.grid[currentRow][col] = null;
+
+      // add new block in place of old one
+      let upgradedBlock = new Block([currentRow, col], currentNextBlockNumber * 2);
+      this.board.grid[currentRow][col] = upgradedBlock;
       console.log(`After remove div: ${this.board.grid}`);
     }
   }
