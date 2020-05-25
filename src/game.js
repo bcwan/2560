@@ -81,7 +81,6 @@ class Game {
     }
   }
 
-  // works for down and right
   updateBoardMovementRightDown(direction) {
     for (let row = this.board.grid.length - 1; row >= 0; row--) {
       for (let col = this.board.grid[row].length - 1; col >= 0; col--) {
