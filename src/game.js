@@ -97,6 +97,7 @@ class Game {
               );
               break;
             case "left":
+              this.mergeBlockLeft(blk.positionClass);
               this.updateClassPosition(blk, 2, 
                 this.board.lastEmptyPosLeft(blk.positionClass)
               );
@@ -204,11 +205,54 @@ class Game {
     }
   }
 
+  mergeBlockLeft(posClass) {
+    //find the closest block
+    debugger;
+    let pos = posClass.split("-");
+    let currentRow = parseInt(pos[1]);
+    let col = parseInt(pos[2]);
+    let currentBlock = this.board.grid[currentRow][col];
 
+    let oldCol = col;
+    col = col - 1;
+    let oldRow = currentRow;
+    let nextBlock = null;
 
-  mergeBlockLeft() {
+    debugger;
+    while (col >= 0) {
+      if (this.board.grid[currentRow][col] === null) {
+        col--;
+      } else {
+        nextBlock = this.board.grid[currentRow][col];
+        break;
+      }
+    }
 
+    
+    if (nextBlock !== null && currentBlock.number === nextBlock.number) {
+      // delete current block
+      debugger;
+
+      console.log(`Before remove div: ${this.board.grid}`);
+      let currentNextBlockNumber = nextBlock.number;
+
+      currentBlock.block.remove();
+      this.board.grid[oldRow][oldCol] = null;
+
+      nextBlock.block.remove();
+      this.board.grid[currentRow][col] = null;
+
+      // add new block in place of old one
+      let upgradedBlock = new Block([currentRow, col], currentNextBlockNumber * 2);
+      this.board.grid[currentRow][col] = upgradedBlock;
+      console.log(`After remove div: ${this.board.grid}`);
+
+      let blockContainer = document.getElementById('block-container');
+      blockContainer.appendChild(upgradedBlock.block);
+    }
   }
+
+
 
   mergeBlockUp() {
 
