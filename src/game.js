@@ -144,8 +144,8 @@ class Game {
     let currentBlock = this.board.grid[currentRow][col];
 
     let oldCol = col;
-    col = col + 1;
     let oldRow = currentRow;
+    col = col + 1;
     let nextBlock = null;
 
     while (col < this.board.grid[currentRow].length) {
@@ -187,8 +187,8 @@ class Game {
     let currentBlock = this.board.grid[currentRow][col];
 
     let oldCol = col;
-    col = col - 1;
     let oldRow = currentRow;
+    col = col - 1;
     let nextBlock = null;
 
     while (col >= 0) {
