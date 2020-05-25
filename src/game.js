@@ -245,27 +245,7 @@ class Game {
       }
     }
 
-
-    if (nextBlock !== null && currentBlock.number === nextBlock.number) {
-      // delete current block
-
-      console.log(`Before remove div: ${this.board.grid}`);
-      let currentNextBlockNumber = nextBlock.number;
-
-      currentBlock.block.remove();
-      this.board.grid[oldRow][oldCol] = null;
-
-      nextBlock.block.remove();
-      this.board.grid[row][currentCol] = null;
-
-      // add new block in place of old one
-      let upgradedBlock = new Block([row, currentCol], currentNextBlockNumber * 2);
-      this.board.grid[row][currentCol] = upgradedBlock;
-      console.log(`After remove div: ${this.board.grid}`);
-
-      let blockContainer = document.getElementById('block-container');
-      blockContainer.appendChild(upgradedBlock.block);
-    }
+    this.merging(nextBlock, currentBlock, oldRow, oldCol, row, currentCol);
   }
 
   mergeBlockDown(posClass) {
@@ -290,23 +270,23 @@ class Game {
       }
     }
 
+    this.merging(nextBlock, currentBlock, oldRow, oldCol, row, currentCol);
+  }
 
-    if (nextBlock !== null && currentBlock.number === nextBlock.number) {
+  merging (nextBlock, currBlock, oldRow, oldCol, currRow, currCol) {
+    if (nextBlock !== null && currBlock.number === nextBlock.number) {
       // delete current block
-
-      console.log(`Before remove div: ${this.board.grid}`);
       let currentNextBlockNumber = nextBlock.number;
 
-      currentBlock.block.remove();
+      currBlock.block.remove();
       this.board.grid[oldRow][oldCol] = null;
 
       nextBlock.block.remove();
-      this.board.grid[row][currentCol] = null;
+      this.board.grid[currRow][currCol] = null;
 
       // add new block in place of old one
-      let upgradedBlock = new Block([row, currentCol], currentNextBlockNumber * 2);
-      this.board.grid[row][currentCol] = upgradedBlock;
-      console.log(`After remove div: ${this.board.grid}`);
+      let upgradedBlock = new Block([currRow, currCol], currentNextBlockNumber * 2);
+      this.board.grid[currRow][currCol] = upgradedBlock;
 
       let blockContainer = document.getElementById('block-container');
       blockContainer.appendChild(upgradedBlock.block);
