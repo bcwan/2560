@@ -32,8 +32,72 @@
   * The game should open in your browser
 
 ## Code Examples
-Show examples of usage:
-`put-your-code-here`
+* One of the moving algorithms that checks how many free spaces there are for the block to move (this function runs if down-key is pressed). All four directions has a specific function similar to below.
+```
+function lastEmptyPosDown(posClass) {
+    let pos = posClass.split("-");
+    let row = parseInt(pos[1]);
+    let currentCol = parseInt(pos[2]);
+
+    row = row + 1;
+    while (row <= this.grid.length - 1) {
+      if (this.grid[row][currentCol] === null) {
+        row++;
+      } else {
+        return row - 1;
+      }
+    }
+    return this.grid.length - 1;
+}
+```
+
+* Here's another moving algorithm that merges blocks together if they are equivalent if down key is pressed. `merging` is a helper function that helps us upgrade block numbers. Every direction has a similar function to below.
+```
+  mergeBlockDown(posClass) {
+    //find the closest block
+    let pos = posClass.split("-");
+    let row = parseInt(pos[1]);
+    let currentCol = parseInt(pos[2]);
+    let currentBlock = this.board.grid[row][currentCol];
+
+    let oldCol = currentCol;
+    let oldRow = row;
+    row = row + 1;
+    let nextBlock = null;
+
+
+    while (row < this.board.grid.length) {
+      if (this.board.grid[row][currentCol] === null) {
+        row++;
+      } else {
+        nextBlock = this.board.grid[row][currentCol];
+        break;
+      }
+    }
+
+    this.merging(nextBlock, currentBlock, oldRow, oldCol, row, currentCol);
+  }
+
+  merging (nextBlock, currBlock, oldRow, oldCol, currRow, currCol) {
+    if (nextBlock !== null && currBlock.number === nextBlock.number) {
+      // delete current block
+      let currentNextBlockNumber = nextBlock.number;
+
+      currBlock.block.remove();
+      this.board.grid[oldRow][oldCol] = null;
+
+      nextBlock.block.remove();
+      this.board.grid[currRow][currCol] = null;
+
+      // add new block in place of old one
+      let upgradedBlock = new Block([currRow, currCol], currentNextBlockNumber * 2);
+      this.board.grid[currRow][currCol] = upgradedBlock;
+
+      let blockContainer = document.getElementById('block-container');
+      blockContainer.appendChild(upgradedBlock.block);
+    }
+  }
+```
 
 ## Features
 List of features
