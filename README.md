@@ -35,14 +35,14 @@ Show examples of usage:
 `put-your-code-here`
 
 ## Features
-List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+List of features
+* Sliding blocks on grid based on direction key pressed
+* Blocks that do not have equivalent numbers will not merge
+* Reset button for new game
 
 To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+* Block numbers font shrinking as block numbers get higher e.g. 2560
+* Sound for sliding blocks
 
 ## Status
 Project is: _in progress_. 
