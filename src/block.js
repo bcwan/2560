@@ -6,7 +6,9 @@ const COLORS_BY_NUMBER = {
   80: "#78BBFFAD",
   160: "#449FFBA1",
   320: "#D5F181",
-  640: "#C1FF00"
+  640: "#C1FF00",
+  1280: "#F0E68C",
+  2560: "#FFD700"
 };
 
 class Block {

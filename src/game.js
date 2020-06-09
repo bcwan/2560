@@ -44,6 +44,7 @@ class Game {
     let added = false;
     while (!added){
       if (this.board.isEmptyPos([randRow, randCol])) {
+        //let newBlock = new Block([randRow, randCol], 5);
         let newBlock = new Block([randRow, randCol], 5);
         this.board.grid[randRow][randCol] = newBlock;
         blockContainer.appendChild(newBlock.block);
