@@ -15,7 +15,8 @@ class Block {
   // pass in coordinates of block on grid
   constructor(pos, number) {
     this.number = number;
-    this.color = COLORS_BY_NUMBER[this.number];
+    //this.color = COLORS_BY_NUMBER[this.number];
+    this.color = this.colorByNumber(this.number);
     this.textColor = "#000000";
     this.block = document.createElement("div");
     this.row = pos[0];
@@ -24,6 +25,13 @@ class Block {
     this.createBlock();
   }
 
+  colorByNumber(number) {
+    if (COLORS_BY_NUMBER[number]) {
+      return COLORS_BY_NUMBER[number];
+    } else {
+      return "#FF8C00";
+    }
+  }
 
   createBlock() {
     this.block.id = "block";
