@@ -14,6 +14,13 @@ const COLORS_BY_NUMBER = {
 // the first numbers places will determine the font-size
 const FONT_SIZE_BY_NUMBER = {
   5: "45px",
+  10: "45px",
+  20: "45px",
+  40: "45px",
+  80: "45px",
+  160: "45px",
+  320: "45px",
+  640: "45px",
   1280: "32px",
   10240: "25px",
   163840: "22px"
@@ -23,10 +30,9 @@ class Block {
   // pass in coordinates of block on grid
   constructor(pos, number) {
     this.number = number;
-    //this.color = COLORS_BY_NUMBER[this.number];
     this.color = this.colorByNumber(this.number);
     this.textColor = "#000000";
-    //this.fontSize = 
+    this.fontSize = this.fontSizeByNumber(this.number);
     this.block = document.createElement("div");
     this.row = pos[0];
     this.column = pos[1];
@@ -46,7 +52,7 @@ class Block {
     if (FONT_SIZE_BY_NUMBER[number]) {
       return FONT_SIZE_BY_NUMBER[number];
     } else {
-      return "20px";
+      return "17px";
     }
   }
 
@@ -62,7 +68,7 @@ class Block {
     let blockNum = document.createElement("p");
     blockNum.id = "block-num";
     blockNum.innerHTML = number;
-    blockNum.style.fontSize = FONT_SIZE_BY_NUMBER[number];
+    blockNum.style.fontSize = this.fontSize;
     blockNum.textColor = this.textColor;
     return blockNum;
   }
