@@ -12,7 +12,7 @@ class Game {
   setUpScore() {
     const points = document.createElement("p");
     points.id = "score";
-    points.innerHTML = "0";
+    points.innerHTML = 0;
     document.getElementById("total-points-div").appendChild(points);
   }
 
@@ -62,6 +62,12 @@ class Game {
         randCol = Math.floor(Math.random() * 5);
       }
     }
+  }
+
+  // works if setUpScore is invoked, since score p-tag exists
+  updateScore() {
+    let newScore = this.board.currentScore();
+    document.getElementById('score').innerHTML = newScore;
   }
 
   updateBoardMovementLeftUp(direction) {
