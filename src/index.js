@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function resetGame() {
         document.getElementById('board').textContent = '';
+        document.getElementById('score').remove();
         game.board = null;
         game = new Game();
     }
