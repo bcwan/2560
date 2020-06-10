@@ -70,24 +70,19 @@ class Game {
     let gameOverCover = document.createElement('div');
     gameOverCover.id = "game-over-cover";
 
-    this.gameOverSetup(gameOverCover);
+    this.gameOverSetup(gameOverCover, "p", "over-cover-title", "Game over!");
+    this.gameOverSetup(gameOverCover, "button", "try-again-btn", "Try Again!");
 
     let board = document.getElementById('board');
     board.appendChild(gameOverCover);
   }
 
-  gameOverSetup(cover) {
-    let description = document.createElement('p');
-    description.id = "over-cover-title";
-    description.innerHTML = "Game over!"
-    cover.appendChild(description);
-
-    let tryAgainButton = document.createElement('button');
-    tryAgainButton.id = "try-again-btn";
-    tryAgainButton.innerHTML = "Try Again!"
-    cover.appendChild(tryAgainButton);
+  gameOverSetup(cover, tagType, idName, desc) {
+    let element = document.createElement(tagType);
+    element.id = idName;
+    element.innerHTML = desc;
+    cover.appendChild(element);
   }
-
 
   // works if setUpScore is invoked, since score p-tag exists
   updateScore() {
