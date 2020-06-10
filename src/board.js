@@ -26,14 +26,14 @@ class Board {
 
   numberOfEmptyPos() {
     let emptyPos = 0;
+    debugger;
     for(let row = 0; row < this.grid.length; row++) {
-      for(let col = 0; col < this.grid[row]; col++) {
-        if (this.isEmptyPos([row, col])) {
+      for(let col = 0; col < this.grid[row].length; col++) {
+        if (this.grid[row][col] === null) {
           emptyPos++;
         }
       }
     }
-    console.log(`Empty positions left: ${emptyPos}`);
     return emptyPos;
   }
 
