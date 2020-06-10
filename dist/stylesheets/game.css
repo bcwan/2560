@@ -28,6 +28,18 @@ body {
     margin-top: 25px;
 }
 
+.instr-how {
+  font-family: clear-sans;
+  text-align: center;
+  color: lightslategray;
+}
+
+.instr-goal {
+  font-family: clear-sans;
+  text-align: center;
+  color: lightslategray;
+}
+
 .title-row {
   text-align: center;
   display: flex;
