@@ -10,22 +10,22 @@ document.addEventListener("DOMContentLoaded", function () {
         switch (event.which) {
             case 37: 
                 game.updateBoardMovementLeftUp("left");
-                game.addNewBlock();
+                //game.addNewBlock();
                 console.log(game.board.grid);
                 break;
             case 39:  
                 game.updateBoardMovementRightDown("right");
-                game.addNewBlock();
+                //game.addNewBlock();
                 console.log(game.board.grid);
                 break;
             case 38:  
                 game.updateBoardMovementLeftUp("up");
-                game.addNewBlock();
+                //game.addNewBlock();
                 console.log(game.board.grid);
                 break;
             case 40: 
                 game.updateBoardMovementRightDown("down");
-                game.addNewBlock();
+                //game.addNewBlock();
                 console.log(game.board.grid);
                 break;
         }

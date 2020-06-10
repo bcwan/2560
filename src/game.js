@@ -44,11 +44,21 @@ class Game {
     blockContainer.id = "block-container";
     document.getElementById("board").appendChild(blockContainer);
 
-    this.addNewBlock();
-    this.addNewBlock();
+    // this.addNewBlock();
+    // this.addNewBlock();
+    ///
+    let array = [
+      [5, 10, 1280, 10, 5],
+      [5, 40, 320, 5, 10],
+      [160, 10, 1280, 10, 5],
+      [1280, 160, 10, 5, 10],
+      [10, 1280, 160, 10, 5]
+    ]
+    this.buildTest(array);
+
   }
 
-  addNewBlock () {
+  addNewBlock() {
     let blockContainer = document.getElementById('block-container');
     let randRow = Math.floor(Math.random() * 5);
     let randCol = Math.floor(Math.random() * 5);
@@ -62,6 +72,23 @@ class Game {
       } else {
         randRow = Math.floor(Math.random() * 5);
         randCol = Math.floor(Math.random() * 5);
+      }
+    }
+  }
+
+  ///
+  testGameOver(row, col, number) {
+    let blockContainer = document.getElementById('block-container');
+    let newBlock = new Block([row, col], number);
+    this.board.grid[row][col] = newBlock;
+    blockContainer.appendChild(newBlock.block);
+  }
+
+  ///
+  buildTest(data){
+    for (let row = 0; row < 5; row++) {
+      for (let col = 0; col < 5; col++) {
+        this.testGameOver(row, col, data[row][col]);
       }
     }
   }
