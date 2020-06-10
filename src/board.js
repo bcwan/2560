@@ -33,6 +33,7 @@ class Board {
         }
       }
     }
+    console.log(`Empty positions left: ${emptyPos}`);
     return emptyPos;
   }
 

@@ -63,7 +63,7 @@ class Game {
     let randRow = Math.floor(Math.random() * 5);
     let randCol = Math.floor(Math.random() * 5);
     let added = false;
-    while (!added){
+    while (!added || this.board.numberOfEmptyPos() > 0){
       if (this.board.isEmptyPos([randRow, randCol])) {
         let newBlock = new Block([randRow, randCol], 5);
         this.board.grid[randRow][randCol] = newBlock;
