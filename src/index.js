@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function resetGame() {
+        //debugger;
         document.getElementById('board').textContent = '';
         document.getElementById('score').remove();
         game.board = null;
@@ -46,6 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
     resetBtnOnPage.onclick = () => {
         resetGame();
     };
+
+    // let resetBtnOverCover = document.getElementById("game-over-cover");
+    // resetBtnOverCover.onclick = () => {
+    //     resetGame();
+    // };
 
 });
 

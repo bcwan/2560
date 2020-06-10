@@ -7,7 +7,7 @@ class Game {
     this.setUpBoard();
     this.setUpBlockContainer();
     this.setUpScore();
-    this.gameOver();
+    //this.gameOver();
   }
 
 
