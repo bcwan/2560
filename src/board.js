@@ -24,6 +24,18 @@ class Board {
     return ((0 <= pos[0]) && (pos[0] < 5) && (0 <= pos[1]) && (pos[1] < 5));
   }
 
+  numberOfEmptyPos() {
+    let emptyPos = 0;
+    for(let row = 0; row < this.grid.length; row++) {
+      for(let col = 0; col < this.grid[row]; col++) {
+        if (this.isEmptyPos([row, col])) {
+          emptyPos++;
+        }
+      }
+    }
+    return emptyPos;
+  }
+
   currentScore() {
     let score = 0;
     for(let i = 0; i < this.grid.length; i++) {
@@ -109,7 +121,7 @@ class Board {
     return this.grid[currentRow].length - 1;
   }
 
-  
+
 
 
 
