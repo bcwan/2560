@@ -38,9 +38,14 @@ body {
   background-color: sandybrown;
   width: 135px;
   height: 75px;
+  margin-top: auto;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  border-radius: 7px;
 }
 
 .points-title {
   font-family: clear-sans;
   color: lightslategray;
+  margin-top: 10px;
 }
