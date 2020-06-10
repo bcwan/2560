@@ -70,3 +70,12 @@ body {
   margin-bottom: 0;
   color: lightslategrey;
 }
+
+#game-over-cover {
+  position: absolute;
+  z-index: 12;
+  width: 450px;
+  height: 450px;
+  background-color: #d2d2d2;
+  opacity: .80;
+}
