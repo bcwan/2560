@@ -69,8 +69,19 @@ class Game {
   gameOver() {
     let gameOverCover = document.createElement('div');
     gameOverCover.id = "game-over-cover";
+
+    let description = document.createElement('p');
+    description.id = "over-cover-title";
+    description.innerHTML = "Game over!"
+
+    gameOverCover.appendChild(description);
+
     let board = document.getElementById('board');
     board.appendChild(gameOverCover);
+  }
+
+  gameOverSetup() {
+    
   }
 
 

@@ -80,3 +80,10 @@ body {
   opacity: .80;
   border-radius: 5px;
 }
+
+#over-cover-title {
+  font-family: clear-sans;
+  font-size: 50px;
+  color: #4a535d;
+  text-align: center;
+}
