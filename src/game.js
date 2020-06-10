@@ -80,8 +80,12 @@ class Game {
     let description = document.createElement('p');
     description.id = "over-cover-title";
     description.innerHTML = "Game over!"
-
     cover.appendChild(description);
+
+    let tryAgainButton = document.createElement('button');
+    tryAgainButton.id = "try-again-btn";
+    tryAgainButton.innerHTML = "Try Again!"
+    cover.appendChild(tryAgainButton);
   }
 
 
