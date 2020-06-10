@@ -82,12 +82,14 @@ class Game {
               this.updateClassPosition(blk, 1, 
                 this.board.lastEmptyPosUp(blk.positionClass)
               );
+              this.updateScore();
               break;
             case "left":
               this.mergeBlockLeft(blk.positionClass);
               this.updateClassPosition(blk, 2, 
                 this.board.lastEmptyPosLeft(blk.positionClass)
               );
+              this.updateScore();
               break;
           }
         }
@@ -107,12 +109,14 @@ class Game {
               this.updateClassPosition(blk, 2,
                 this.board.lastEmptyPosRight(blk.positionClass)
               );
+              this.updateScore();
               break
             case "down":
               this.mergeBlockDown(blk.positionClass);
               this.updateClassPosition(blk, 1,
                 this.board.lastEmptyPosDown(blk.positionClass)
               );
+              this.updateScore();
               break;
           }
         }
