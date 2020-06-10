@@ -30,4 +30,5 @@ body {
 
 .title-row {
   text-align: center;
+  display: flex;
 }
