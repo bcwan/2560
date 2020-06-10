@@ -6,7 +6,15 @@ class Game {
     this.board = new Board();
     this.setUpBoard();
     this.setUpBlockContainer();
+    this.setUpScore();
   }
+
+  setUpScore() {
+    const points = document.createElement("p");
+    points.id = "score";
+    document.getElementById("total-points-div").appendChild(points);
+  }
+
 
   setUpBoard() {  
     const grid = document.createElement("div");
