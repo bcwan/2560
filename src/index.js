@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
     window.onkeydown = onKeyPressed;
 
     // reset game
-    let resetBtn = document.querySelector(".restart-btn");
-    resetBtn.onclick = () => {
+    let resetBtnOnPage = document.querySelector(".restart-btn-on-page");
+    resetBtnOnPage.onclick = () => {
         resetGame();
     };
 

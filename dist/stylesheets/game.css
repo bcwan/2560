@@ -14,7 +14,7 @@ body {
   color: #877674;
 }
 
-.restart-btn {
+.restart-btn-on-page {
     background-color: darkgrey;
     border: none;
     color: white;
@@ -78,4 +78,5 @@ body {
   height: 450px;
   background-color: #d2d2d2;
   opacity: .80;
+  border-radius: 5px;
 }
