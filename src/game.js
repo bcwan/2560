@@ -7,6 +7,7 @@ class Game {
     this.setUpBoard();
     this.setUpBlockContainer();
     this.setUpScore();
+    this.gameOver();
   }
 
 
@@ -65,9 +66,11 @@ class Game {
     }
   }
 
-  // no blocks can be merged, and no more empty board space
   gameOver() {
-    
+    let gameOverCover = document.createElement('div');
+    gameOverCover.id = "game-over-cover";
+    let board = document.getElementById('board');
+    board.appendChild(gameOverCover);
   }
 
 
