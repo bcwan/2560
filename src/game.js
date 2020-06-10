@@ -70,18 +70,18 @@ class Game {
     let gameOverCover = document.createElement('div');
     gameOverCover.id = "game-over-cover";
 
-    let description = document.createElement('p');
-    description.id = "over-cover-title";
-    description.innerHTML = "Game over!"
-
-    gameOverCover.appendChild(description);
+    this.gameOverSetup(gameOverCover);
 
     let board = document.getElementById('board');
     board.appendChild(gameOverCover);
   }
 
-  gameOverSetup() {
-    
+  gameOverSetup(cover) {
+    let description = document.createElement('p');
+    description.id = "over-cover-title";
+    description.innerHTML = "Game over!"
+
+    cover.appendChild(description);
   }
 
 
