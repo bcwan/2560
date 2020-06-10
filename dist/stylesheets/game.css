@@ -33,3 +33,14 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.points {
+  background-color: sandybrown;
+  width: 135px;
+  height: 75px;
+}
+
+.points-title {
+  font-family: clear-sans;
+  color: lightslategray;
+}
