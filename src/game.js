@@ -9,6 +9,7 @@ class Game {
     this.setUpScore();
   }
 
+
   setUpScore() {
     const points = document.createElement("p");
     points.id = "score";
@@ -63,6 +64,12 @@ class Game {
       }
     }
   }
+
+  // no blocks can be merged, and no more empty board space
+  gameOver() {
+    
+  }
+
 
   // works if setUpScore is invoked, since score p-tag exists
   updateScore() {
