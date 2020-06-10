@@ -12,6 +12,7 @@ class Game {
   setUpScore() {
     const points = document.createElement("p");
     points.id = "score";
+    points.innerHTML = "0";
     document.getElementById("total-points-div").appendChild(points);
   }
 
