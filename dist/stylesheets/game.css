@@ -87,3 +87,17 @@ body {
   color: #4a535d;
   text-align: center;
 }
+
+#try-again-btn {
+  background-color: #615252;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  font-family: clear-sans;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+}

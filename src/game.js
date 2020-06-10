@@ -70,14 +70,14 @@ class Game {
     let gameOverCover = document.createElement('div');
     gameOverCover.id = "game-over-cover";
 
-    this.gameOverSetup(gameOverCover, "p", "over-cover-title", "Game over!");
-    this.gameOverSetup(gameOverCover, "button", "try-again-btn", "Try Again!");
+    this.gameOverSetupAttr(gameOverCover, "p", "over-cover-title", "Game over!");
+    this.gameOverSetupAttr(gameOverCover, "button", "try-again-btn", "Try Again!");
 
     let board = document.getElementById('board');
     board.appendChild(gameOverCover);
   }
 
-  gameOverSetup(cover, tagType, idName, desc) {
+  gameOverSetupAttr(cover, tagType, idName, desc) {
     let element = document.createElement(tagType);
     element.id = idName;
     element.innerHTML = desc;
