@@ -43,17 +43,8 @@ class Game {
     blockContainer.id = "block-container";
     document.getElementById("board").appendChild(blockContainer);
 
-    // this.addNewBlock();
-    // this.addNewBlock();
-    ///
-    let array = [
-      [5, 10, 1280, 10, 5],
-      [5, 40, 320, 5, 10],
-      [160, 10, 1280, 10, 5],
-      [1280, 160, 10, 5, 10],
-      [10, 1280, 160, 10, 5]
-    ]
-    this.buildTest(array);
+    this.addNewBlock();
+    this.addNewBlock();
 
   }
 
@@ -79,7 +70,7 @@ class Game {
     }
   }
 
-  ///
+  /// test functions for future development
   testGameOver(row, col, number) {
     let blockContainer = document.getElementById('block-container');
     let newBlock = new Block([row, col], number);
@@ -87,7 +78,6 @@ class Game {
     blockContainer.appendChild(newBlock.block);
   }
 
-  ///
   buildTest(data){
     for (let row = 0; row < 5; row++) {
       for (let col = 0; col < 5; col++) {
