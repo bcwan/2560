@@ -101,7 +101,6 @@ class Game {
     gameOverCover.id = "game-over-cover";
 
     this.gameOverSetupAttr(gameOverCover, "p", "over-cover-title", "Game over!");
-    this.gameOverSetupAttr(gameOverCover, "button", "try-again-btn", "Try Again!");
 
     let board = document.getElementById('board');
     board.appendChild(gameOverCover);

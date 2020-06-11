@@ -85,20 +85,6 @@ body {
   font-family: clear-sans;
   font-size: 50px;
   color: black;
-  margin-top: 100px;
+  margin-top: 180px;
   text-align: center;
-}
-
-#try-again-btn {
-  background-color: black;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  font-family: clear-sans;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 8px;
-  display: block;
-  margin: auto;
-  margin-top: 25px;
 }

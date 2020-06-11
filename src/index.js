@@ -3,8 +3,9 @@ let Game = require("./game");
 
 document.addEventListener("DOMContentLoaded", function () {
     let game = new Game();
-
+    
     function onKeyPressed (event) {
+
         let gameOverCovering = document.getElementById('game-over-cover');
         if (!gameOverCovering) {
             switch (event.which) {
@@ -47,11 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
     resetBtnOnPage.onclick = () => {
         resetGame();
     };
-
-    // let resetBtnOverCover = document.getElementById("game-over-cover");
-    // resetBtnOverCover.onclick = () => {
-    //     resetGame();
-    // };
 
 });
 
