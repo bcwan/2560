@@ -7,7 +7,6 @@ class Game {
     this.setUpBoard();
     this.setUpBlockContainer();
     this.setUpScore();
-    //this.gameOver();
   }
 
 
@@ -63,7 +62,6 @@ class Game {
     let randRow = Math.floor(Math.random() * 5);
     let randCol = Math.floor(Math.random() * 5);
     let added = false;
-    debugger;
     if (this.board.numberOfEmptyPos() > 0) {
       while (!added){
         if (this.board.isEmptyPos([randRow, randCol])) {
@@ -76,6 +74,8 @@ class Game {
           randCol = Math.floor(Math.random() * 5);
         }
       }
+    } else {
+      this.gameOver();
     }
   }
 
