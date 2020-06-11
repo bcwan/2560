@@ -1,6 +1,5 @@
 //console.log("Webpack is working!");
 let Game = require("./game"); 
-let Block = require("./block");
 
 document.addEventListener("DOMContentLoaded", function () {
     let game = new Game();
@@ -34,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function resetGame() {
-        //debugger;
         document.getElementById('board').textContent = '';
         document.getElementById('score').remove();
         game.board = null;
