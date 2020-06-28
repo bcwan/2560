@@ -12,7 +12,7 @@
 ## General info
 2560 is a 2048-inspired game based on factors of 5. The goal is to try to create a 2560 block.
 
-[Live Link](https://bcwan.github.io/)
+[Live Link](https://bcwan.github.io/2560/)
 
 ## Screenshots
 ![Example screenshot](./images/sample.png)
